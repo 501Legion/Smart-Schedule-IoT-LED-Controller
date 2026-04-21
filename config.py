@@ -1,0 +1,31 @@
+# Calendar
+CALENDAR = "e585b47e2052776fccec78b1e1112e085ae607a0bfb4c8848921edc45bccf88b@group.calendar.google.com"          # "@group.calendar.google.com" also has to be on the end of the string (see 'get shareable link' on calendar on google
+APIKEY = "AIzaSyBtKihTTrVwCPV6gtFvIv9HIJapjsQBxXk"
+TIMEZONE = "Asia/Seoul"
+GOOGLECALBOOL = True                            # Boolean for whether to check google calendar page. If you do not want to use Google Calendar, set to False
+REFRESH = 15                                    # Seconds between updates of neopixel
+GOOGLE_REFRESH = 40                             # Cycles of updates before Google Calendar gets refreshed
+IGNORE_HARDCODED = False                        # Set to True if you want Clock in at the start of first meeting and Clockout at end of last meeting
+SCHEDULE = {                                    # This doesn't get used if IGNORE_HARDCODED is True. Othewise, it's the working hours for the week. (9.5 = 09:30 AM; 13 = 01:00 PM)
+    "monday":     [{"clockin": "1",   "clockout": "19"}],
+    "tuesday":    [{"clockin": "8",   "clockout": "19"}],
+    "wednesday":  [{"clockin": "8",   "clockout": "17"}],
+    "thursday":   [{"clockin": "8",   "clockout": "17"}],
+    "friday":     [{"clockin": "8",   "clockout": "17"}],
+    "saturday":   [{"clockin": "0",   "clockout": "0"}],    # I don't roll on shabbos
+    "sunday":     [{"clockin": "0",   "clockout": "0"}]
+}
+
+# Neopixel
+PIXELS = 60                                   # The number of pixels on the neopixel strip
+GPIOPIN = 18                                    # The pin that the signal wire of the LED strip is connected to
+BARCOL = [(0, 100, 0), (0, 0, 100)]             # Color in RGB from 0 to 255
+EVENTCOL = [(255, 255, 255), (255, 255, 0)]     # list of tuples used as meeting colors, if you only use one: [(255, 255, 255)]
+DISPLAY_EVENTS = True                           # Shows events
+FLIP = False                                    # Set to True if you want to flip the bar
+
+# Other
+TTS_MODE = "gtts"
+ALSA_DEVICE = "hw:2,0"
+TWOCOL = False                                  # Displays a second bar that shows the progress of an event. While event is active, other events are not displayed anymore.
+DELWIFI = True                                  # Deletes wifi credentials if the connection fails
