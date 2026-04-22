@@ -1,6 +1,6 @@
 # Calendar
-CALENDAR = "e585b47e2052776fccec78b1e1112e085ae607a0bfb4c8848921edc45bccf88b@group.calendar.google.com"          # "@group.calendar.google.com" also has to be on the end of the string (see 'get shareable link' on calendar on google
-APIKEY = "AIzaSyBtKihTTrVwCPV6gtFvIv9HIJapjsQBxXk"
+CALENDAR = ""          # "@group.calendar.google.com" also has to be on the end of the string (see 'get shareable link' on calendar on google
+APIKEY = ""
 TIMEZONE = "Asia/Seoul"
 GOOGLECALBOOL = True                            # Boolean for whether to check google calendar page. If you do not want to use Google Calendar, set to False
 REFRESH = 15                                    # Seconds between updates of neopixel
